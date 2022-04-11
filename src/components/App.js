@@ -14,7 +14,7 @@ export const App = () => {
     <>
       <Suspense fallback={''}>
         <Routes>
-          <Route except path="/" element={<Style />}>
+          <Route path="/" element={<Style />}>
             <Route path="home" element={<HomePage />} />
             <Route path="movies" element={<FilmPage />} />
 
