@@ -1,9 +1,9 @@
 import {useLocation} from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { MovieCredits } from '../APImovies/MoviesAPI';
+import { MovieCredits } from '../../APImovies/MoviesAPI';
 import { ActorScrn, ActorBox } from './Cast.styled.jsx';
 
-export const Cast = () => {
+export default function Cast () {
     const [actors, setActors] = useState([]);
     const location = useLocation();
     const prevId = location.pathname.slice(8);

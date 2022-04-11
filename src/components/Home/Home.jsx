@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { FetchTrendingMovies } from '../APImovies/MoviesAPI';
+import { FetchTrendingMovies } from '../../APImovies/MoviesAPI';
 import { ToastContainer, toast } from 'react-toastify';
 import {Title, Item, List, StyledLink } from './Home.styled.js';
 

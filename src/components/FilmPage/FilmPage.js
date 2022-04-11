@@ -1,6 +1,6 @@
 import { useSearchParams, useLocation, Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { SearchMovie } from '../APImovies/MoviesAPI';
+import { SearchMovie } from '../../APImovies/MoviesAPI';
 import {
   SearchbarHead,
   SearchForm,

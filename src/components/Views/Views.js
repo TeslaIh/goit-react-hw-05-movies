@@ -1,8 +1,8 @@
 import {useLocation} from 'react-router-dom';
 import { useState, useEffect } from "react";
-import { MoviesView } from '../APImovies/MoviesAPI';
+import { MoviesView } from '../../APImovies/MoviesAPI';
 
-export const Views = () => {
+export default function Views() {
     const [views, setViews] = useState([])
     const location = useLocation();
     const prevId = location.pathname.slice(8);

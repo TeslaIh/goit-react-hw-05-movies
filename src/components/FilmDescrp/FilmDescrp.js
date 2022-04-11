@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom';
-import { FilmDetails } from '../APImovies/MoviesAPI';
+import { FilmDetails } from '../../APImovies/MoviesAPI';
 import { useState, useEffect } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import { FilmBlock } from '../Poster/PosterBlock';
