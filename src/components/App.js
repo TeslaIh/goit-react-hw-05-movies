@@ -3,7 +3,7 @@ import { lazy, Suspense } from 'react';
 import  Style  from './Style/Style';
 import 'react-toastify/dist/ReactToastify.css';
 
-const HomePage = lazy(() => import('./Home/Home.jsx'));
+const HomePage = lazy(() => import('./HomePage/HomePage.jsx'));
 const FilmPage = lazy(() => import('./FilmPage/FilmPage.js'));
 const FilmDescrp = lazy(() => import('./FilmDescrp/FilmDescrp.js'));
 const Cast = lazy(() => import('./Cast/Cast.js'));
