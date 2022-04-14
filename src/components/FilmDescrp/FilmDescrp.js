@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom';
 import { FilmDetails } from '../../APImovies/MoviesAPI';
 import { useState, useEffect } from 'react';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import { FilmBlock } from '../Poster/PosterBlock';
 
 export default function FilmDetailsPage() {
@@ -23,7 +23,6 @@ export default function FilmDetailsPage() {
   return (
     <>
       {item && <FilmBlock item={item} />}
-      <ToastContainer autoClose={2000} />
     </>
   );
 }

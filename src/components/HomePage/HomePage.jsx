@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { FetchTrendingMovies } from '../../APImovies/MoviesAPI';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import {Title, Item, List, StyledLink } from './HomePage.styled.js';
 
 export default function HomePage() {
@@ -30,7 +30,6 @@ export default function HomePage() {
           ))}
         </List>
       </main>
-      <ToastContainer autoClose={2000} />
     </>
   );
 }

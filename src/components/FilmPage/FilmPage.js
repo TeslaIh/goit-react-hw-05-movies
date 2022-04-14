@@ -21,8 +21,8 @@ export default function FilmPage() {
         e.preventDefault();
         setSearchParams({ query: e.currentTarget.elements.query.value });
 
-        if (e.currentTarget.elements.query.value.trim() === '') {
-            toast.error('Negative, try again!', { position: 'top-center' });
+        if (e.currentTarget.elements.query.value.toLowerCase().trim() === '') {
+            toast('Empty request!', { position: 'top-center' });
             return;
         }
         e.currentTarget.reset();
@@ -37,7 +37,7 @@ export default function FilmPage() {
             try {
                 const cardSearch = await SearchMovie(query);
                 if (cardSearch.length === 0) {
-                    toast('By your request no results', { icon: (<MdError size={18} />), });
+                    toast('By your request no results', { icon: (<MdError size={26} />), });
                     
                 }
                 setFilm(cardSearch);
@@ -53,7 +53,7 @@ export default function FilmPage() {
         <SearchbarHead>
           <SearchForm onSubmit={handleSubmit}>
             <SearchFormButton type="submit">
-              <FaSearchengin size={18} /> <span>Search</span>
+              <FaSearchengin size={26} /> <span>Search</span>
             </SearchFormButton>
 
             <SearchFormInput
@@ -80,3 +80,4 @@ export default function FilmPage() {
       </>
     );
 }
+

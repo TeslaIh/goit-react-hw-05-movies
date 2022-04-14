@@ -1,5 +1,6 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
+import { ToastContainer } from 'react-toastify';
 import  Style  from './Style/Style';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -26,6 +27,7 @@ export const App = () => {
             <Route path="/" element={<Navigate to="/home" />} />
           </Route>
         </Routes>
+        <ToastContainer autoClose={2000} />
       </Suspense>
     </>
   );
