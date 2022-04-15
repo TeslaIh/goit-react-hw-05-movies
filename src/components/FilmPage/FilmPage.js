@@ -19,17 +19,20 @@ export default function FilmPage() {
 
     const handleSubmit = e => {
         e.preventDefault();
-        setSearchParams({ query: e.currentTarget.elements.query.value });
+        const searchQuery = e.target.elements.query.value.trim();
 
-        if (e.currentTarget.elements.query.value.toLowerCase().trim() === '') {
-            toast('Empty request!', { position: 'top-center' });
-            return;
-        }
-        e.currentTarget.reset();
+        if (!searchQuery) {
+          toast('Empty request!', { position: 'top-center' });
+          setSearchParams('');
+          return;
+      }
+      
+      setSearchParams({ query: searchQuery });
+      e.currentTarget.reset();
     };
 
     useEffect(() => {
-        if (query === null) {
+        if (!query) {
             return;
         }
 
@@ -38,7 +41,6 @@ export default function FilmPage() {
                 const cardSearch = await SearchMovie(query);
                 if (cardSearch.length === 0) {
                     toast('By your request no results', { icon: (<MdError size={26} />), });
-                    
                 }
                 setFilm(cardSearch);
             } catch (error) {
